@@ -12,7 +12,8 @@ function Tokens() {
     }
   }
   let [trackedTokens] = useState(initTrackedTokens); // TODO add token search and add / remove
-  return (
+  return (<>
+    <h2>The prices are updated in real time, every trade on Ref triggers an update</h2>
     <div className="tokens">
       {
         trackedTokens.map(token => (
@@ -20,7 +21,7 @@ function Tokens() {
         ))
       }
     </div>
-  );
+  </>);
 }
 
 export default Tokens;

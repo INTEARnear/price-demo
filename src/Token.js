@@ -46,7 +46,7 @@ function Token({ token }) {
             .then((res) => res.text())
             .then((res) => parseFloat(res))
             .then((res) => setPrice(res));
-    }, []);
+    }, [token]);
     useWebSocket(`${WEBSOCKET_URL}/events/price_token`, {
         onOpen: (event) => {
             event.target.send(JSON.stringify({ token }));

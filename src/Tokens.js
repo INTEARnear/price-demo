@@ -11,7 +11,7 @@ function Tokens() {
       initTrackedTokens = tokens;
     }
   }
-  let [trackedTokens, setTrackedTokens] = useState(initTrackedTokens);
+  let [trackedTokens, _setTrackedTokens] = useState(initTrackedTokens); // TODO add token search and add / remove
   return (
     <div className="tokens">
       {
